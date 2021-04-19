@@ -85,3 +85,13 @@ extension UINavigationBar{
         isTranslucent = false
     }
 }
+
+extension UIScrollView{
+    final func setDefalutView(){
+        contentSize.width = frame.width
+        contentSize.height = frame.height * 2
+        isScrollEnabled = true
+        alwaysBounceVertical = true
+        
+    }
+}

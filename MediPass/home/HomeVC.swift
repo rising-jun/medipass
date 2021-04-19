@@ -10,7 +10,7 @@ import RxSwift
 import RxViewController
 
 class HomeVC: BaseViewController {
-
+    
     lazy var homeView = HomeView(frame: view.frame)
     
     private let disposeBag = DisposeBag()
@@ -21,10 +21,10 @@ class HomeVC: BaseViewController {
                 .asSignal()
                 .map{ _ in ViewLifeState.viewWillAppear}
                 .asObservable())
-
+    
     private lazy var output = viewModel.transform(input: input)
-
-    private var timer: Timer?
+    
+    private var timer = PublishSubject<Int>.timer(0, period: 2.0, scheduler: MainScheduler.instance)
     private var arrCount: Int = 0
     
     private var serviceData = ServiceCollection()
@@ -52,17 +52,27 @@ class HomeVC: BaseViewController {
             guard let self = self else { return }
             self.homeView.noticeLabel.text = array[0]
             
-            self.timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(2), repeats: true){_ in
+            self.timer.subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
                 self.homeView.noticeLabel.alpha = 0
-                UIView.animate(withDuration: 0.3) {
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.homeView.noticeLabel.text = ""
                     self.arrCount += 1
-                    self.homeView.noticeLabel.text = array[self.arrCount % 3]
-                    self.homeView.noticeLabel.animate(duration: 0.3)
-                    self.homeView.noticeLabel.alpha = 1
-                }
+                    
+                    self.homeView.noticeLabel.animate(duration: 0.4)
+                }, completion: { (bool) in
+                    if bool{
+                        self.homeView.noticeLabel.text = array[self.arrCount % 3]
+                        self.homeView.noticeLabel.alpha = 1
+                    }else{
+                        self.homeView.noticeLabel.alpha = 0
+                    }
+                })
+                self.view.layoutIfNeeded()
             }
-        }.disposed(by: disposeBag)
-    
+            
+        )}.disposed(by: disposeBag)
+        
         output.iconArray?.filter{$0.count >= 3}.drive{ [weak self] array in
             guard let self = self else { return }
             self.serviceData.cellArr = array
@@ -78,12 +88,10 @@ class HomeVC: BaseViewController {
             self.homeView.healthCollectionView.register(HealthCell.self, forCellWithReuseIdentifier: "health")
             self.homeView.healthCollectionView.delegate = self.healthData
             self.homeView.healthCollectionView.dataSource = self.healthData
-            
         }.disposed(by: disposeBag)
         
         
+        
     }
-
-
+    
 }
-
