@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72390190262973EC00AA9C64 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7239018F262973EC00AA9C64 /* ServiceCell.swift */; };
+		7239019426297B8D00AA9C64 /* ServiceCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7239019326297B8D00AA9C64 /* ServiceCollection.swift */; };
+		7239019726297CA500AA9C64 /* ServiceCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7239019626297CA500AA9C64 /* ServiceCellInfo.swift */; };
 		72AF86472626D2310070FA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF86462626D2310070FA98 /* AppDelegate.swift */; };
-		72AF86492626D2310070FA98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF86482626D2310070FA98 /* SceneDelegate.swift */; };
-		72AF864B2626D2310070FA98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF864A2626D2310070FA98 /* ViewController.swift */; };
-		72AF864E2626D2310070FA98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF864C2626D2310070FA98 /* Main.storyboard */; };
+		72AF864B2626D2310070FA98 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF864A2626D2310070FA98 /* HomeVC.swift */; };
 		72AF86502626D2320070FA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72AF864F2626D2320070FA98 /* Assets.xcassets */; };
 		72AF86532626D2320070FA98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF86512626D2320070FA98 /* LaunchScreen.storyboard */; };
+		72AF86602626D3650070FA98 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF865F2626D3650070FA98 /* Base.swift */; };
+		72AF86652626D3AD0070FA98 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF86642626D3AD0070FA98 /* HomeView.swift */; };
+		72AF86692626D5570070FA98 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF86682626D5570070FA98 /* HomeViewModel.swift */; };
+		72B568492626EF4E0014DA77 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B568482626EF4E0014DA77 /* HomeModel.swift */; };
+		72ED855C262D662D00F3A0A5 /* HealthCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED855B262D662D00F3A0A5 /* HealthCollection.swift */; };
+		72ED8560262D667800F3A0A5 /* HealthCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED855F262D667800F3A0A5 /* HealthCellInfo.swift */; };
+		72ED8563262D66A000F3A0A5 /* HealthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED8562262D66A000F3A0A5 /* HealthCell.swift */; };
+		850B3861CB92404021051951 /* Pods_MediPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C44688C07544FACCDF280CF /* Pods_MediPass.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CB945DBE3CF031B9EFCF0CB /* Pods-MediPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediPass.debug.xcconfig"; path = "Target Support Files/Pods-MediPass/Pods-MediPass.debug.xcconfig"; sourceTree = "<group>"; };
+		5C44688C07544FACCDF280CF /* Pods_MediPass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediPass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7239018F262973EC00AA9C64 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		7239019326297B8D00AA9C64 /* ServiceCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollection.swift; sourceTree = "<group>"; };
+		7239019626297CA500AA9C64 /* ServiceCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCellInfo.swift; sourceTree = "<group>"; };
 		72AF86432626D2310070FA98 /* MediPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72AF86462626D2310070FA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72AF86482626D2310070FA98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		72AF864A2626D2310070FA98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		72AF864D2626D2310070FA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		72AF864A2626D2310070FA98 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		72AF864F2626D2320070FA98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72AF86522626D2320070FA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72AF86542626D2320070FA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72AF865F2626D3650070FA98 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		72AF86642626D3AD0070FA98 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		72AF86682626D5570070FA98 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		72B568482626EF4E0014DA77 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		72ED855B262D662D00F3A0A5 /* HealthCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCollection.swift; sourceTree = "<group>"; };
+		72ED855F262D667800F3A0A5 /* HealthCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCellInfo.swift; sourceTree = "<group>"; };
+		72ED8562262D66A000F3A0A5 /* HealthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCell.swift; sourceTree = "<group>"; };
+		A6DE36907F076DCE338EBEF5 /* Pods-MediPass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediPass.release.xcconfig"; path = "Target Support Files/Pods-MediPass/Pods-MediPass.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				850B3861CB92404021051951 /* Pods_MediPass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7239018E262972B800AA9C64 /* factor */ = {
+			isa = PBXGroup;
+			children = (
+				72ED855A262D661F00F3A0A5 /* healthCollection */,
+				72ED8559262D660B00F3A0A5 /* serviceCollection */,
+			);
+			path = factor;
+			sourceTree = "<group>";
+		};
 		72AF863A2626D2310070FA98 = {
 			isa = PBXGroup;
 			children = (
 				72AF86452626D2310070FA98 /* MediPass */,
 				72AF86442626D2310070FA98 /* Products */,
+				93EBF4B2F8C288989B8B048F /* Pods */,
+				D2467EF06EB452602C2F8861 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +88,71 @@
 		72AF86452626D2310070FA98 /* MediPass */ = {
 			isa = PBXGroup;
 			children = (
+				72AF86632626D3A00070FA98 /* home */,
+				72AF865E2626D3490070FA98 /* baseclass */,
 				72AF86462626D2310070FA98 /* AppDelegate.swift */,
-				72AF86482626D2310070FA98 /* SceneDelegate.swift */,
-				72AF864A2626D2310070FA98 /* ViewController.swift */,
-				72AF864C2626D2310070FA98 /* Main.storyboard */,
 				72AF864F2626D2320070FA98 /* Assets.xcassets */,
 				72AF86512626D2320070FA98 /* LaunchScreen.storyboard */,
 				72AF86542626D2320070FA98 /* Info.plist */,
 			);
 			path = MediPass;
+			sourceTree = "<group>";
+		};
+		72AF865E2626D3490070FA98 /* baseclass */ = {
+			isa = PBXGroup;
+			children = (
+				72AF865F2626D3650070FA98 /* Base.swift */,
+			);
+			path = baseclass;
+			sourceTree = "<group>";
+		};
+		72AF86632626D3A00070FA98 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				7239018E262972B800AA9C64 /* factor */,
+				72AF864A2626D2310070FA98 /* HomeVC.swift */,
+				72AF86642626D3AD0070FA98 /* HomeView.swift */,
+				72AF86682626D5570070FA98 /* HomeViewModel.swift */,
+				72B568482626EF4E0014DA77 /* HomeModel.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		72ED8559262D660B00F3A0A5 /* serviceCollection */ = {
+			isa = PBXGroup;
+			children = (
+				7239018F262973EC00AA9C64 /* ServiceCell.swift */,
+				7239019326297B8D00AA9C64 /* ServiceCollection.swift */,
+				7239019626297CA500AA9C64 /* ServiceCellInfo.swift */,
+			);
+			path = serviceCollection;
+			sourceTree = "<group>";
+		};
+		72ED855A262D661F00F3A0A5 /* healthCollection */ = {
+			isa = PBXGroup;
+			children = (
+				72ED855B262D662D00F3A0A5 /* HealthCollection.swift */,
+				72ED855F262D667800F3A0A5 /* HealthCellInfo.swift */,
+				72ED8562262D66A000F3A0A5 /* HealthCell.swift */,
+			);
+			path = healthCollection;
+			sourceTree = "<group>";
+		};
+		93EBF4B2F8C288989B8B048F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CB945DBE3CF031B9EFCF0CB /* Pods-MediPass.debug.xcconfig */,
+				A6DE36907F076DCE338EBEF5 /* Pods-MediPass.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D2467EF06EB452602C2F8861 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C44688C07544FACCDF280CF /* Pods_MediPass.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72AF86572626D2320070FA98 /* Build configuration list for PBXNativeTarget "MediPass" */;
 			buildPhases = (
+				78DCAD8B1F643C64A5A7AC3A /* [CP] Check Pods Manifest.lock */,
 				72AF863F2626D2310070FA98 /* Sources */,
 				72AF86402626D2310070FA98 /* Frameworks */,
 				72AF86412626D2310070FA98 /* Resources */,
+				AE921643B46993D9A30AE495 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,34 +216,76 @@
 			files = (
 				72AF86532626D2320070FA98 /* LaunchScreen.storyboard in Resources */,
 				72AF86502626D2320070FA98 /* Assets.xcassets in Resources */,
-				72AF864E2626D2310070FA98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78DCAD8B1F643C64A5A7AC3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediPass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE921643B46993D9A30AE495 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MediPass/Pods-MediPass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MediPass/Pods-MediPass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MediPass/Pods-MediPass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72AF863F2626D2310070FA98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72AF864B2626D2310070FA98 /* ViewController.swift in Sources */,
+				72AF86602626D3650070FA98 /* Base.swift in Sources */,
+				72AF86652626D3AD0070FA98 /* HomeView.swift in Sources */,
+				72B568492626EF4E0014DA77 /* HomeModel.swift in Sources */,
+				72390190262973EC00AA9C64 /* ServiceCell.swift in Sources */,
+				7239019726297CA500AA9C64 /* ServiceCellInfo.swift in Sources */,
+				72ED855C262D662D00F3A0A5 /* HealthCollection.swift in Sources */,
+				72AF864B2626D2310070FA98 /* HomeVC.swift in Sources */,
+				72AF86692626D5570070FA98 /* HomeViewModel.swift in Sources */,
 				72AF86472626D2310070FA98 /* AppDelegate.swift in Sources */,
-				72AF86492626D2310070FA98 /* SceneDelegate.swift in Sources */,
+				72ED8563262D66A000F3A0A5 /* HealthCell.swift in Sources */,
+				72ED8560262D667800F3A0A5 /* HealthCellInfo.swift in Sources */,
+				7239019426297B8D00AA9C64 /* ServiceCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		72AF864C2626D2310070FA98 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72AF864D2626D2310070FA98 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		72AF86512626D2320070FA98 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +415,7 @@
 		};
 		72AF86582626D2320070FA98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CB945DBE3CF031B9EFCF0CB /* Pods-MediPass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +435,7 @@
 		};
 		72AF86592626D2320070FA98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6DE36907F076DCE338EBEF5 /* Pods-MediPass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
