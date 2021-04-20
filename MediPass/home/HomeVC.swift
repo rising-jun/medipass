@@ -29,6 +29,7 @@ class HomeVC: BaseViewController {
     
     private var serviceData = ServiceCollection()
     private var healthData = HealthCollection()
+    private var slideData = SlideCollection()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -90,7 +91,21 @@ class HomeVC: BaseViewController {
             self.homeView.healthCollectionView.dataSource = self.healthData
         }.disposed(by: disposeBag)
         
+        output.slideArray?.filter{$0.count >= 2}.drive{ [weak self] array in
+            guard let self = self else { return }
+            var cellArr: [SlideCellInfo] = []
+            for e in array{
+                let image = UIImage(data: e)!
+                cellArr.append(SlideCellInfo(image))
+            }
+            
+            self.slideData.cellArr = cellArr
+            self.homeView.slideCollection.register(SlideCell.self, forCellWithReuseIdentifier: "Slide")
+            self.homeView.slideCollection.delegate = self.slideData
+            self.homeView.slideCollection.dataSource = self.slideData
+        }.disposed(by: disposeBag)
         
+    
         
     }
     

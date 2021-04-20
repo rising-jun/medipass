@@ -30,27 +30,26 @@ class HomeView: BaseView{
     lazy var healthLabel = UILabel()
     var healthCollectionView: UICollectionView!
     
-    var recommendCollectionView: UICollectionView!
+    lazy var slideView = UIView()
+    var slideCollection: UICollectionView!
     
     override func setup() {
         super.setup()
         backgroundColor = .systemGray6
-        scrollView.contentSize.height = 1320
-        
-        
         serviceCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        
         let healthLayout = UICollectionViewFlowLayout()
         healthLayout.scrollDirection = .horizontal
         healthLayout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 10)
         healthCollectionView = UICollectionView(frame: .zero, collectionViewLayout: healthLayout)
         
-        let recommendLayout = UICollectionViewFlowLayout()
-        recommendLayout.scrollDirection = .horizontal
-        recommendLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        recommendCollectionView = UICollectionView(frame: .zero, collectionViewLayout: recommendLayout)
-        
-        
+        let slideLayout = UICollectionViewFlowLayout()
+        slideLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        slideLayout.scrollDirection = .horizontal
+        slideCollection = UICollectionView(frame: .zero, collectionViewLayout: slideLayout)
+    
         scrollView.setDefalutView()
+        
         addSubViews(scrollView)
         scrollView.backgroundColor = .systemGray6
         scrollView.snp.makeConstraints { (make) in
@@ -58,7 +57,8 @@ class HomeView: BaseView{
             make.center.equalTo(self)
         }
         
-        scrollView.addSubViews(greetLabel, greetLabel2, noticeView, serviceCollectionView, healthView, recommendCollectionView)
+        scrollView.addSubViews(greetLabel, greetLabel2, noticeView, serviceCollectionView, healthView, slideView)
+        
         greetLabel.snp.makeConstraints { (make) in
             make.leading.equalTo(scrollView).offset(20)
             make.top.equalTo(scrollView).offset(20)
@@ -93,12 +93,14 @@ class HomeView: BaseView{
         
         noticeLabel.snp.makeConstraints { (make) in
             make.width.equalTo(noticeView)
-            make.height.equalTo(25)
+            make.height.equalTo(15)
             make.centerY.equalTo(noticeView.snp.centerY)
         }
         
         noticeLabel.textAlignment = .center
-        noticeLabel.font = noticeLabel.font.withSize(18)
+        noticeLabel.font = noticeLabel.font.withSize(14)
+        noticeLabel.minimumScaleFactor = 0.1
+        noticeLabel.adjustsFontSizeToFitWidth = true
         
         serviceCollectionView.backgroundColor = .white
         serviceCollectionView.layer.borderWidth = 0.5
@@ -144,10 +146,32 @@ class HomeView: BaseView{
         healthCollectionView.bounces = false
         healthCollectionView.showsHorizontalScrollIndicator = false
         
-        recommendCollectionView.snp.makeConstraints { (make) in
-            
-        }
         
+       
+
+        
+        slideCollection.backgroundColor = .black
+        slideView.snp.makeConstraints { (make) in
+            make.height.equalTo(200)
+            make.width.equalTo(serviceCollectionView.snp.width)
+            make.top.equalTo(healthView.snp.bottom).offset(20)
+            make.centerX.equalTo(healthView)
+        }
+        slideView.backgroundColor = .yellow
+        slideView.addSubview(slideCollection)
+        slideCollection.snp.makeConstraints { (make) in
+            make.height.equalTo(200)
+            make.width.equalTo(230)
+            make.top.equalTo(healthView.snp.bottom).offset(20)
+            make.centerX.equalTo(healthView)
+        }
+        slideCollection.bounces = false
+        slideCollection.isPagingEnabled = true
+        slideCollection.showsHorizontalScrollIndicator = false
+        slideCollection.setShadow()
+        
+        scrollView.contentSize.height = 87
+
     }
     
     

@@ -20,6 +20,7 @@ class HomeViewModel: ViewModelType{
         let noticeString = BehaviorRelay(value: [""])
         let iconArray = BehaviorRelay(value: [ServiceCellInfo]())
         let healthArray = BehaviorRelay(value: [HealthCellInfo]())
+        let slideArray = BehaviorRelay(value: [Data]())
         
         input.viewState?.filter{$0 == .viewWillAppear}.subscribe(onNext: {[weak self] (state) in
             guard let self = self else {return}
@@ -27,12 +28,19 @@ class HomeViewModel: ViewModelType{
             noticeString.accept(self.model.getNoticeArray())
             iconArray.accept(self.model.getIconArray())
             healthArray.accept(self.model.getHealthArray())
+            
+            let arrData = self.model.getImageData()
+            arrData.bind { (arr) in
+                slideArray.accept(arr)
+            }.disposed(by: self.disposeBag)
+            
         }).disposed(by: disposeBag)
         
         return Output(preparingViews: preparingViews.asDriver(),
                       noticeArray: noticeString.asDriver(),
                       iconArray: iconArray.asDriver(),
-                      healthArray: healthArray.asDriver())
+                      healthArray: healthArray.asDriver(),
+                      slideArray: slideArray.asDriver())
     }
     
     struct Input{
@@ -45,6 +53,7 @@ class HomeViewModel: ViewModelType{
         var noticeArray: Driver<[String]>?
         var iconArray: Driver<[ServiceCellInfo]>?
         var healthArray: Driver<[HealthCellInfo]>?
+        var slideArray: Driver<[Data]>?
     }
     
 }
