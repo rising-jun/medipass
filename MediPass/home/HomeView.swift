@@ -32,6 +32,15 @@ class HomeView: BaseView{
     
     lazy var slideView = UIView()
     var slideCollection: UICollectionView!
+    lazy var pageControl: UIPageControl = {
+        let pc = UIPageControl()
+        
+        pc.translatesAutoresizingMaskIntoConstraints = false
+        pc.pageIndicatorTintColor = .lightGray
+        pc.currentPageIndicatorTintColor = .systemBlue
+        
+        return pc
+    }()
     
     override func setup() {
         super.setup()
@@ -44,10 +53,10 @@ class HomeView: BaseView{
         healthCollectionView = UICollectionView(frame: .zero, collectionViewLayout: healthLayout)
         
         let slideLayout = UICollectionViewFlowLayout()
-        slideLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         slideLayout.scrollDirection = .horizontal
+        slideLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         slideCollection = UICollectionView(frame: .zero, collectionViewLayout: slideLayout)
-    
+        
         scrollView.setDefalutView()
         
         addSubViews(scrollView)
@@ -57,7 +66,7 @@ class HomeView: BaseView{
             make.center.equalTo(self)
         }
         
-        scrollView.addSubViews(greetLabel, greetLabel2, noticeView, serviceCollectionView, healthView, slideView)
+        scrollView.addSubViews(greetLabel, greetLabel2, noticeView, serviceCollectionView, healthView, slideView, pageControl)
         
         greetLabel.snp.makeConstraints { (make) in
             make.leading.equalTo(scrollView).offset(20)
@@ -146,11 +155,8 @@ class HomeView: BaseView{
         healthCollectionView.bounces = false
         healthCollectionView.showsHorizontalScrollIndicator = false
         
-        
-       
-
-        
         slideCollection.backgroundColor = .black
+        slideCollection.layer.cornerRadius = 13
         slideView.snp.makeConstraints { (make) in
             make.height.equalTo(200)
             make.width.equalTo(serviceCollectionView.snp.width)
@@ -158,19 +164,30 @@ class HomeView: BaseView{
             make.centerX.equalTo(healthView)
         }
         slideView.backgroundColor = .yellow
+        slideView.setShadow()
         slideView.addSubview(slideCollection)
         slideCollection.snp.makeConstraints { (make) in
-            make.height.equalTo(200)
-            make.width.equalTo(230)
+            make.height.equalTo(slideView)
+            make.width.equalTo(slideView)
             make.top.equalTo(healthView.snp.bottom).offset(20)
             make.centerX.equalTo(healthView)
         }
         slideCollection.bounces = false
         slideCollection.isPagingEnabled = true
         slideCollection.showsHorizontalScrollIndicator = false
-        slideCollection.setShadow()
         
-        scrollView.contentSize.height = 87
+        pageControl.snp.makeConstraints { (make) in
+            make.width.equalTo(150)
+            make.height.equalTo(50)
+            make.top.equalTo(slideCollection.snp.bottom).inset(50)
+            make.centerX.equalTo(scrollView)
+            
+        }
+        
+        pageControl.allowsContinuousInteraction = true
+        
+        
+        scrollView.contentSize.height = 900
 
     }
     

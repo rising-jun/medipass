@@ -81,8 +81,8 @@ extension UIView {
 extension UINavigationBar{
     final func setColorWithView(){
         barTintColor = .systemGray6
-        shadowImage = UIImage()
         isTranslucent = false
+        shadowImage = UIImage()
     }
 }
 
@@ -94,4 +94,40 @@ extension UIScrollView{
         alwaysBounceVertical = true
         
     }
+}
+
+extension UIColor {
+    func image(_ size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
+        return UIGraphicsImageRenderer(size: size).image { rendererContext in
+            self.setFill()
+            rendererContext.fill(CGRect(origin: .zero, size: size))
+        }
+    }
+}
+
+extension CALayer {
+  func addBorder(edge: UIRectEdge, color: UIColor, thickness: CGFloat) {
+
+    let border = CALayer()
+
+    switch edge {
+    case UIRectEdge.top:
+        border.frame = CGRect(x: 0, y: 47, width: frame.width, height: thickness)
+
+    case UIRectEdge.bottom:
+        border.frame = CGRect(x:0, y: frame.height - thickness, width: frame.width, height:thickness)
+
+    case UIRectEdge.left:
+        border.frame = CGRect(x:0, y:0, width: thickness, height: frame.height)
+
+    case UIRectEdge.right:
+        border.frame = CGRect(x: frame.width - thickness, y: 0, width: thickness, height: frame.height)
+
+    default: do {}
+    }
+
+    border.backgroundColor = color.cgColor
+
+    addSublayer(border)
+ }
 }

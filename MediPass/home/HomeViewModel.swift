@@ -22,9 +22,9 @@ class HomeViewModel: ViewModelType{
         let healthArray = BehaviorRelay(value: [HealthCellInfo]())
         let slideArray = BehaviorRelay(value: [Data]())
         
-        input.viewState?.filter{$0 == .viewWillAppear}.subscribe(onNext: {[weak self] (state) in
+        input.viewState?.filter{$0 == .viewWillAppear}.take(1).subscribe(onNext: {[weak self] (state) in
             guard let self = self else {return}
-            preparingViews.accept(true)
+            
             noticeString.accept(self.model.getNoticeArray())
             iconArray.accept(self.model.getIconArray())
             healthArray.accept(self.model.getHealthArray())
@@ -34,6 +34,10 @@ class HomeViewModel: ViewModelType{
                 slideArray.accept(arr)
             }.disposed(by: self.disposeBag)
             
+        }).disposed(by: disposeBag)
+        
+        input.viewState?.filter{$0 == .viewWillAppear}.subscribe(onNext: { (state) in
+            preparingViews.accept(true)
         }).disposed(by: disposeBag)
         
         return Output(preparingViews: preparingViews.asDriver(),

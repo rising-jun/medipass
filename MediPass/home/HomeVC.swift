@@ -33,9 +33,7 @@ class HomeVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.navigationController?.navigationBar.setColorWithView()
-        tabBarController?.navigationItem.leftBarButtonItem = homeView.setNavigationBarTitle()
-        tabBarController?.navigationItem.rightBarButtonItem = homeView.setNavigationBarAlarm()
+        
         
     }
     
@@ -45,8 +43,13 @@ class HomeVC: BaseViewController {
         output.preparingViews?.filter{$0 == true}.drive{ [weak self] _ in
             guard let self = self else { return }
             self.view = self.homeView
+            self.navigationController?.additionalSafeAreaInsets.top = 0
+            self.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.systemGray6
+            self.navigationController?.navigationBar.setColorWithView()
+            self.tabBarController!.navigationItem.leftBarButtonItem = self.homeView.setNavigationBarTitle()
+            self.tabBarController!.navigationItem.rightBarButtonItem = self.homeView.setNavigationBarAlarm()
             
-            
+            self.homeView.scrollView.delegate = self
         }.disposed(by: disposeBag)
         
         output.noticeArray?.filter{$0.count >= 3}.drive{ [weak self] array in
@@ -100,13 +103,32 @@ class HomeVC: BaseViewController {
             }
             
             self.slideData.cellArr = cellArr
+            self.slideData.pageControl_ = self.homeView.pageControl
+            self.slideData.timerStart()
+            self.slideData.slider_ = self.homeView.slideCollection
             self.homeView.slideCollection.register(SlideCell.self, forCellWithReuseIdentifier: "Slide")
             self.homeView.slideCollection.delegate = self.slideData
             self.homeView.slideCollection.dataSource = self.slideData
+            
+            self.homeView.slideCollection.selectItem(at: IndexPath(row: 5001, section: 0), animated: false, scrollPosition: .left)
+           
         }.disposed(by: disposeBag)
         
     
         
+    }
+    
+}
+
+extension HomeVC: UIScrollViewDelegate{
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 0 {
+            self.navigationController?.navigationBar.standardAppearance.shadowColor = UIColor.gray
+        }else{
+            self.navigationController?.navigationBar.standardAppearance.shadowColor = nil
+        }
+        self.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.systemGray6
     }
     
 }

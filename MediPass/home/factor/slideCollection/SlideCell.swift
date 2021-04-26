@@ -17,19 +17,18 @@ class SlideCell: UICollectionViewCell{
         super.awakeFromNib()
         contentView.addSubview(coverView)
         
+        coverView.layer.masksToBounds = true
+        coverView.translatesAutoresizingMaskIntoConstraints = true
         coverView.snp.makeConstraints { (make) in
-            make.width.equalTo(220)
-            make.height.equalTo(190)
+            make.width.equalTo(contentView)
+            make.height.equalTo(contentView)
             make.center.equalTo(contentView)
         }
         coverView.addSubview(imageView)
         
-        imageView.contentMode = .scaleToFill
-        imageView.layer.cornerRadius = 10
-        imageView.layer.borderWidth = 0.3
+        imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = true
-        imageView.contentMode = .scaleToFill
         imageView.snp.makeConstraints { (make) in
             make.width.equalTo(coverView.snp.width)
             make.height.equalTo(coverView.snp.height)

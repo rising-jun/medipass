@@ -28,6 +28,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarController.addChild(homeVC)
         homeVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(), tag: 0)
         
+        let historyPagerVC = HistoryPagerVC()
+        tabBarController.addChild(historyPagerVC)
+        historyPagerVC.tabBarItem = UITabBarItem(title: "내역", image: UIImage(), tag: 1)
+        
+        let myVC = MyVC()
+        tabBarController.addChild(myVC)
+        myVC.tabBarItem = UITabBarItem(title: "내정보", image: UIImage(), tag: 1)
+        tabBarController.tabBar.backgroundColor = .white
+        
         return true
     }
 

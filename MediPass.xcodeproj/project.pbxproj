@@ -10,6 +10,25 @@
 		72390190262973EC00AA9C64 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7239018F262973EC00AA9C64 /* ServiceCell.swift */; };
 		7239019426297B8D00AA9C64 /* ServiceCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7239019326297B8D00AA9C64 /* ServiceCollection.swift */; };
 		7239019726297CA500AA9C64 /* ServiceCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7239019626297CA500AA9C64 /* ServiceCellInfo.swift */; };
+		72590FD326369235007C5BCF /* AboutMediCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72590FD226369235007C5BCF /* AboutMediCell.swift */; };
+		72590FD92636A76A007C5BCF /* NoticeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72590FD82636A76A007C5BCF /* NoticeCollection.swift */; };
+		7267613A263136DA00D8318D /* HistoryPagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72676139263136DA00D8318D /* HistoryPagerVC.swift */; };
+		7267613D263137D300D8318D /* HistoryPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267613C263137D300D8318D /* HistoryPagerView.swift */; };
+		7267614626313D5500D8318D /* MenuCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267614526313D5500D8318D /* MenuCollection.swift */; };
+		7267614B26313D6400D8318D /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267614A26313D6400D8318D /* MenuCell.swift */; };
+		7267615426313E1E00D8318D /* PagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267615326313E1E00D8318D /* PagerCell.swift */; };
+		7267615726313F7200D8318D /* ClaimVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267615626313F7200D8318D /* ClaimVC.swift */; };
+		7267615A26313F7C00D8318D /* ReservationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267615926313F7C00D8318D /* ReservationVC.swift */; };
+		7267615D2631477600D8318D /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267615C2631477600D8318D /* HistoryViewModel.swift */; };
+		726761602631506500D8318D /* ClaimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267615F2631506500D8318D /* ClaimView.swift */; };
+		726761632631520D00D8318D /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726761622631520D00D8318D /* ReservationView.swift */; };
+		726761672631527300D8318D /* MyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726761662631527300D8318D /* MyVC.swift */; };
+		7267616B2631536E00D8318D /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267616A2631536E00D8318D /* MyView.swift */; };
+		7267616E2631554900D8318D /* MyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267616D2631554900D8318D /* MyViewModel.swift */; };
+		7286407D2632ACE70085A548 /* InfoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7286407C2632ACE70085A548 /* InfoCollection.swift */; };
+		728640812632ACEF0085A548 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728640802632ACEF0085A548 /* InfoCell.swift */; };
+		728640842632ACFB0085A548 /* MyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728640832632ACFB0085A548 /* MyInfo.swift */; };
+		728640872632B2B80085A548 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728640862632B2B80085A548 /* MyModel.swift */; };
 		72AF86472626D2310070FA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF86462626D2310070FA98 /* AppDelegate.swift */; };
 		72AF864B2626D2310070FA98 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF864A2626D2310070FA98 /* HomeVC.swift */; };
 		72AF86502626D2320070FA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72AF864F2626D2320070FA98 /* Assets.xcassets */; };
@@ -33,6 +52,25 @@
 		7239018F262973EC00AA9C64 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		7239019326297B8D00AA9C64 /* ServiceCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollection.swift; sourceTree = "<group>"; };
 		7239019626297CA500AA9C64 /* ServiceCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCellInfo.swift; sourceTree = "<group>"; };
+		72590FD226369235007C5BCF /* AboutMediCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMediCell.swift; sourceTree = "<group>"; };
+		72590FD82636A76A007C5BCF /* NoticeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollection.swift; sourceTree = "<group>"; };
+		72676139263136DA00D8318D /* HistoryPagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPagerVC.swift; sourceTree = "<group>"; };
+		7267613C263137D300D8318D /* HistoryPagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPagerView.swift; sourceTree = "<group>"; };
+		7267614526313D5500D8318D /* MenuCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollection.swift; sourceTree = "<group>"; };
+		7267614A26313D6400D8318D /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		7267615326313E1E00D8318D /* PagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerCell.swift; sourceTree = "<group>"; };
+		7267615626313F7200D8318D /* ClaimVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimVC.swift; sourceTree = "<group>"; };
+		7267615926313F7C00D8318D /* ReservationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationVC.swift; sourceTree = "<group>"; };
+		7267615C2631477600D8318D /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		7267615F2631506500D8318D /* ClaimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimView.swift; sourceTree = "<group>"; };
+		726761622631520D00D8318D /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
+		726761662631527300D8318D /* MyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVC.swift; sourceTree = "<group>"; };
+		7267616A2631536E00D8318D /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		7267616D2631554900D8318D /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
+		7286407C2632ACE70085A548 /* InfoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollection.swift; sourceTree = "<group>"; };
+		728640802632ACEF0085A548 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		728640832632ACFB0085A548 /* MyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfo.swift; sourceTree = "<group>"; };
+		728640862632B2B80085A548 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		72AF86432626D2310070FA98 /* MediPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72AF86462626D2310070FA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72AF864A2626D2310070FA98 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -74,6 +112,103 @@
 			path = factor;
 			sourceTree = "<group>";
 		};
+		72590FD62636A600007C5BCF /* noticeCollection */ = {
+			isa = PBXGroup;
+			children = (
+				72590FD82636A76A007C5BCF /* NoticeCollection.swift */,
+			);
+			path = noticeCollection;
+			sourceTree = "<group>";
+		};
+		726761372631341400D8318D /* history */ = {
+			isa = PBXGroup;
+			children = (
+				7267614426313D3E00D8318D /* factor */,
+				72676142263139D500D8318D /* claim */,
+				72676141263139CC00D8318D /* reservation */,
+				72676139263136DA00D8318D /* HistoryPagerVC.swift */,
+				7267613C263137D300D8318D /* HistoryPagerView.swift */,
+				7267615C2631477600D8318D /* HistoryViewModel.swift */,
+			);
+			path = history;
+			sourceTree = "<group>";
+		};
+		72676141263139CC00D8318D /* reservation */ = {
+			isa = PBXGroup;
+			children = (
+				7267615926313F7C00D8318D /* ReservationVC.swift */,
+				726761622631520D00D8318D /* ReservationView.swift */,
+			);
+			path = reservation;
+			sourceTree = "<group>";
+		};
+		72676142263139D500D8318D /* claim */ = {
+			isa = PBXGroup;
+			children = (
+				7267615626313F7200D8318D /* ClaimVC.swift */,
+				7267615F2631506500D8318D /* ClaimView.swift */,
+			);
+			path = claim;
+			sourceTree = "<group>";
+		};
+		7267614426313D3E00D8318D /* factor */ = {
+			isa = PBXGroup;
+			children = (
+				7267614E26313DFA00D8318D /* pager */,
+				7267614926313D5B00D8318D /* menu */,
+			);
+			path = factor;
+			sourceTree = "<group>";
+		};
+		7267614926313D5B00D8318D /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				7267614526313D5500D8318D /* MenuCollection.swift */,
+				7267614A26313D6400D8318D /* MenuCell.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		7267614E26313DFA00D8318D /* pager */ = {
+			isa = PBXGroup;
+			children = (
+				7267615326313E1E00D8318D /* PagerCell.swift */,
+			);
+			path = pager;
+			sourceTree = "<group>";
+		};
+		726761652631526100D8318D /* my */ = {
+			isa = PBXGroup;
+			children = (
+				7286407B2632ACD30085A548 /* factor */,
+				726761662631527300D8318D /* MyVC.swift */,
+				7267616A2631536E00D8318D /* MyView.swift */,
+				7267616D2631554900D8318D /* MyViewModel.swift */,
+				728640862632B2B80085A548 /* MyModel.swift */,
+			);
+			path = my;
+			sourceTree = "<group>";
+		};
+		7286407A2632ACC00085A548 /* infoCollection */ = {
+			isa = PBXGroup;
+			children = (
+				7286407C2632ACE70085A548 /* InfoCollection.swift */,
+				728640802632ACEF0085A548 /* InfoCell.swift */,
+				728640832632ACFB0085A548 /* MyInfo.swift */,
+				72590FD226369235007C5BCF /* AboutMediCell.swift */,
+			);
+			path = infoCollection;
+			sourceTree = "<group>";
+		};
+		7286407B2632ACD30085A548 /* factor */ = {
+			isa = PBXGroup;
+			children = (
+				72590FD62636A600007C5BCF /* noticeCollection */,
+				7286407A2632ACC00085A548 /* infoCollection */,
+			);
+			path = factor;
+			sourceTree = "<group>";
+		};
 		72AF863A2626D2310070FA98 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +230,8 @@
 		72AF86452626D2310070FA98 /* MediPass */ = {
 			isa = PBXGroup;
 			children = (
+				726761652631526100D8318D /* my */,
+				726761372631341400D8318D /* history */,
 				72AF86632626D3A00070FA98 /* home */,
 				72AF865E2626D3490070FA98 /* baseclass */,
 				72AF86462626D2310070FA98 /* AppDelegate.swift */,
@@ -286,20 +423,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B62F82262EA76C00B96ED3 /* SlideCellInfo.swift in Sources */,
+				7267615426313E1E00D8318D /* PagerCell.swift in Sources */,
 				72AF86602626D3650070FA98 /* Base.swift in Sources */,
+				7267616B2631536E00D8318D /* MyView.swift in Sources */,
+				726761602631506500D8318D /* ClaimView.swift in Sources */,
 				72AF86652626D3AD0070FA98 /* HomeView.swift in Sources */,
+				7267615D2631477600D8318D /* HistoryViewModel.swift in Sources */,
 				72B568492626EF4E0014DA77 /* HomeModel.swift in Sources */,
 				72B62F7B262EA75A00B96ED3 /* SlideCell.swift in Sources */,
+				726761672631527300D8318D /* MyVC.swift in Sources */,
+				7267613A263136DA00D8318D /* HistoryPagerVC.swift in Sources */,
+				7267614B26313D6400D8318D /* MenuCell.swift in Sources */,
 				72390190262973EC00AA9C64 /* ServiceCell.swift in Sources */,
 				72B62F7F262EA76300B96ED3 /* SlideCollection.swift in Sources */,
+				726761632631520D00D8318D /* ReservationView.swift in Sources */,
 				7239019726297CA500AA9C64 /* ServiceCellInfo.swift in Sources */,
 				72ED855C262D662D00F3A0A5 /* HealthCollection.swift in Sources */,
+				728640842632ACFB0085A548 /* MyInfo.swift in Sources */,
 				72AF864B2626D2310070FA98 /* HomeVC.swift in Sources */,
+				7267615A26313F7C00D8318D /* ReservationVC.swift in Sources */,
 				72AF86692626D5570070FA98 /* HomeViewModel.swift in Sources */,
+				72590FD326369235007C5BCF /* AboutMediCell.swift in Sources */,
+				7267615726313F7200D8318D /* ClaimVC.swift in Sources */,
+				7267614626313D5500D8318D /* MenuCollection.swift in Sources */,
 				72AF86472626D2310070FA98 /* AppDelegate.swift in Sources */,
 				72ED8563262D66A000F3A0A5 /* HealthCell.swift in Sources */,
 				72ED8560262D667800F3A0A5 /* HealthCellInfo.swift in Sources */,
+				72590FD92636A76A007C5BCF /* NoticeCollection.swift in Sources */,
+				7267613D263137D300D8318D /* HistoryPagerView.swift in Sources */,
+				7267616E2631554900D8318D /* MyViewModel.swift in Sources */,
+				7286407D2632ACE70085A548 /* InfoCollection.swift in Sources */,
 				7239019426297B8D00AA9C64 /* ServiceCollection.swift in Sources */,
+				728640812632ACEF0085A548 /* InfoCell.swift in Sources */,
+				728640872632B2B80085A548 /* MyModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
